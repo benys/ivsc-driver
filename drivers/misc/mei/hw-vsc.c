@@ -3,6 +3,7 @@
  * Copyright (c) 2021, Intel Corporation. All rights reserved.
  * Intel Management Engine Interface (Intel MEI) Linux driver
  */
+#include <linux/spi/spi.h>
 #include <linux/crc32.h>
 #include <linux/delay.h>
 #include <linux/firmware.h>

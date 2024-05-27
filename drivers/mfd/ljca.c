@@ -5,6 +5,7 @@
  * Copyright (c) 2021, Intel Corporation.
  */
 
+#include <linux/spi/spi.h>
 #include <linux/acpi.h>
 #include <linux/kernel.h>
 #include <linux/mfd/core.h>

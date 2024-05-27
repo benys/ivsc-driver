@@ -2,6 +2,7 @@
 #ifndef __LINUX_USB_LJCA_H
 #define __LINUX_USB_LJCA_H
 
+#include <linux/spi/spi.h>
 #include <linux/kernel.h>
 #include <linux/platform_device.h>
 #include <linux/types.h>

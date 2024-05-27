@@ -43,7 +43,7 @@ all:
 	$(MAKE) -C $(KERNEL_SRC) M=$(PWD) modules
 
 modules_install:
-	$(MAKE) INSTALL_MOD_DIR=/updates -C $(KERNEL_SRC) M=$(PWD) modules_install
+	$(MAKE) INSTALL_MOD_PATH=$out INSTALL_MOD_PATH=$out INSTALL_MOD_DIR=/updates -C $(KERNEL_SRC) M=$(PWD) modules_install
 
 clean:
 	$(MAKE) -C $(KERNEL_SRC) M=$(PWD) clean
