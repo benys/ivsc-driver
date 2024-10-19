@@ -450,9 +450,8 @@ static int ljca_gpio_probe(struct platform_device *pdev)
 	return devm_gpiochip_add_data(&pdev->dev, &ljca_gpio->gc, ljca_gpio);
 }
 
-static int ljca_gpio_remove(struct platform_device *pdev)
+static void ljca_gpio_remove(struct platform_device *pdev)
 {
-	return 0;
 }
 
 static struct platform_driver ljca_gpio_driver = {

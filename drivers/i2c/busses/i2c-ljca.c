@@ -439,13 +439,11 @@ static int ljca_i2c_probe(struct platform_device *pdev)
 	return 0;
 }
 
-static int ljca_i2c_remove(struct platform_device *pdev)
+static void ljca_i2c_remove(struct platform_device *pdev)
 {
 	struct ljca_i2c_dev *ljca_i2c = platform_get_drvdata(pdev);
 
 	i2c_del_adapter(&ljca_i2c->adap);
-
-	return 0;
 }
 
 static struct platform_driver ljca_i2c_driver = {

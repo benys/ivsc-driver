@@ -247,7 +247,7 @@ static int ljca_spi_probe(struct platform_device *pdev)
 	struct ljca_platform_data *pdata = dev_get_platdata(&pdev->dev);
 	int ret;
 
-	master = spi_alloc_controller(&pdev->dev, sizeof(*ljca_spi));
+	master = spi_alloc_master(&pdev->dev, sizeof(*ljca_spi));
 	if (!master)
 		return -ENOMEM;
 
@@ -281,13 +281,12 @@ exit_free_master:
 	return ret;
 }
 
-static int ljca_spi_dev_remove(struct platform_device *pdev)
+static void ljca_spi_dev_remove(struct platform_device *pdev)
 {
 	struct spi_controller *master = spi_controller_get(platform_get_drvdata(pdev));
 	struct ljca_spi_dev *ljca_spi = spi_controller_get_devdata(master);
 
 	ljca_spi_deinit(ljca_spi);
-	return 0;
 }
 
 #ifdef CONFIG_PM_SLEEP
